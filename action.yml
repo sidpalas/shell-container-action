@@ -16,6 +16,7 @@ outputs:
 
 runs:
   using: docker
-  image: Dockerfile
+  # image: Dockerfile # specifying "Dockerfile" here causes the image to be built with each execution
+  image: sidpalas/shell-container-action:v0.0.1 # specifying a public image allows you to skip the build
   env:
     INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
